@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Free Speech Codec (Speex)</title>
+	<meta name="description" content="Speex codec in Javascript">
+	<meta name="author" content="Joao Martins">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<audio id="Nodes" src="./2.mp3" controls="controls" autoPlay></audio>
+	</div>
+</body>
+<script src="./index.js"></script>
+<script>
+	initAudio()
+	//一开始H5标签中引入的是MP3格式文件
+	const wrapper = document.querySelector('#wrapper')
+	const Nodes = document.querySelector('#Nodes')
+	wrapper.onclick = function () {
+		//点击之后将引入的文件切换为ogg后缀的文件，即speex格式的音频文件
+		Nodes.src = "./1.ogg"
+		initAudio()
+	}
+</script>
+
+</html>
