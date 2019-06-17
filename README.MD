@@ -8,13 +8,13 @@
 
 * 只能使用<script>标签像我的index.html文件一样引入源码
 
-* 如果你想要在页面中通过写死的形式 静态播放 speex文件 引入后源码在全局顶部调用函数  initAudio()  
+* 如果你的使用方式是直接在页面中 <audio src="./test.ogg">，那么请你在引入源码，立即在全局JS代码顶部调用函数  initAudio()  
 
-* 如果你的<audio>标签中  src属性是动态的，那么请你每次修改src属性前调用函数initAudio()，否则不可以播放speex格式的音频文件
+* 如果你的使用方式是动态添加audio标签，或者动态修改audio标签的src属性，那么请你每次修改src属性后调用函数initAudio()，否则是不可以播放speex格式的音频文件的
 
-* speex格式音频文件，后缀可能是ogg的，但是任然可以播放
+* speex格式音频文件，后缀可能是ogg的，但是任然可以播放（speex只是一个开源免费压缩协议）
 
-* 本项目不支持任何模块化  禁止在框架中通过 import或者require导入  
+* 本项目不支持任何模块化  禁止在框架中通过 import或者require导入 ，因为源码中涉及8进制的代码，严格模式下是不可以使用八进制的
 
 * MVVM框架和原生的JS使用方法都是通过script引入，全局调用initAudio函数
 
