@@ -1,6 +1,6 @@
 {
   "name": "speex-in-h5",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "speex in h5 ,use audio.src is ok ! ",
   "main": "index.js ",
   "repository": "https://github.com/JinJieTan/speex-in-h5.git",
